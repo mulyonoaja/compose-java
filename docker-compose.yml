@@ -1,1 +1,18 @@
+version: "3.7"
 
+services:
+  mongo:
+    container_name: mongo
+    image: mongo:4-xenial
+    ports:
+      - 27017:27017
+  redis:
+    container_name: redis
+    image: redis:5
+    ports:
+      - 6379:6379
+  java-docker:
+    container_name: java-docker
+    image: java-docker:1.0
+    ports:
+      - 8080:8080
